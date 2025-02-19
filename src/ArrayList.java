@@ -83,7 +83,7 @@ public class ArrayList<T> {
      * @param index the position of the list element to set
      */
     public void set(int index, T item) {
-        //TODO
+        arr[index] = item;
     }
 
     /**
