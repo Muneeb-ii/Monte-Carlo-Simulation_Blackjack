@@ -49,7 +49,21 @@ public class ArrayList<T> {
      * @param item the item to add to the list
      */
     public void add(T item) {
-        //TODO
+        if (size == arr.length){
+            T[] newArr = (T[]) new Object[size*2];
+
+            for(int i=0; i<arr.length; i++){
+                newArr[i] = arr[i];
+            }
+
+            newArr[size] = item;
+            arr = newArr;
+            size++;
+        }
+        else{
+            arr[size]=item;
+            size++;
+        }
     }
 
     /**
