@@ -1,5 +1,5 @@
 /**
-* Author: TODO-FirstName TODO-LastName 
+* Author: Muneeb Nafees
 * 
 * Purpose of the class: A basic implementation of an ArrayList.
 * that provides basic operations
