@@ -20,7 +20,7 @@ public class ArrayList<T> {
      * The default constructor for the ArrayList
      */
     public ArrayList(){
-        // TODO
+        this(1);
     }
 
     /** 
