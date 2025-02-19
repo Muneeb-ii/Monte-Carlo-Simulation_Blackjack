@@ -73,7 +73,7 @@ public class ArrayList<T> {
      * @return the element at the specified position in the list
      */
     public T get(int index) {
-        //TODO
+        return arr[index];
     }
 
     /**
