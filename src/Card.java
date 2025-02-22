@@ -32,6 +32,6 @@ public class Card {
      * @return a string representation of this card
      */
     public String toString() {
-        // TBD
+        return Integer.toString(value);
     }
 }
