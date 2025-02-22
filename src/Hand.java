@@ -4,6 +4,7 @@ public class Hand {
      * Creates an empty hand as an ArrayList of Cards.  
      */
     public Hand(){
+        ArrayList<Card> hand = new ArrayList<Card>();
     }
 
     /**
