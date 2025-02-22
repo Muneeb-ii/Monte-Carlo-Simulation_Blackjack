@@ -24,7 +24,7 @@ public class Card {
      * @return the value of the card
      */
     public int getValue() {
-        // TBD
+        return value;
     }
     
     /**
