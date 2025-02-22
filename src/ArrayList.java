@@ -87,19 +87,20 @@ public class ArrayList<T> {
     }
 
     /**
-     * Removes and returns the last element of the list.
+     * Removes and returns the element at index
      *
-     * @return the removed last element of the list
+     * @return the removed element of the list
      */
     public T remove(int index) {
         T out = arr[index];
 
         //Move all of the elements after index back one
         //to account for the removed item
-        for (int i = index; i < size; i++)
-            arr[i] = arr[i + 1];
-
-        arr[size--] = null;
+        for (int i = index+1; i < size; i++) {
+            arr[i-1] = arr[i];
+        }
+        size -- ;
+        arr[size] = null;
 
         return out;
     }
