@@ -14,12 +14,31 @@ How to run:     java -ea BlackjackTests
 
 public class BlackjackTests {
 
+    /**
+     * Runs 10000 games of blackjack and prints the percentage of draws, dealer wins, and player wins.
+     */
+
     public static void blackjackTests() {
 
-        //TODO
-        //Simulate 10,000 blackjack games and compute the 
-        //percents of draws, dealer wins and player wins
-        //Your results should match the expected results above.
+        int dealerWins = 0;
+        int playerWins = 0;
+        int draws = 0;
+
+        for (int i = 0; i < 10000; i++) {
+            Blackjack game = new Blackjack();
+            int result = game.game(false);
+            if (result == 1) {
+                playerWins++;
+            } else if (result == -1) {
+                dealerWins++;
+            } else {
+                draws++;
+            }
+        }
+
+        System.out.println("Draw percent: " + (draws*10000)/ 100);
+        System.out.println("Dealer win percent: " + (dealerWins*10000)/ 100);
+        System.out.println("Player win percent: " + (playerWins*10000)/ 100);
 
     }
 
