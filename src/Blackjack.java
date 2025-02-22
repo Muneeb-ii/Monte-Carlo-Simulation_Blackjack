@@ -93,7 +93,7 @@ public class Blackjack {
         deal();
         if (verbose == true){
             System.out.println("Initial game state:");
-            System.out.println("Player: " + playerHand.toString() + "\nDealer: " + dealerHand.toString());
+            System.out.println(this);
             
             boolean playerSafe = playerTurn();
 
@@ -105,26 +105,26 @@ public class Blackjack {
                     int dealerTotal = dealerHand.getTotalValue();
                     if (playerTotal > dealerTotal) {
                         System.out.println("Final game state:");
-                        System.out.println("Player: " + playerHand.toString() + "\nDealer: " + dealerHand.toString());
+                        System.out.println(this);
                         System.out.println("Player wins!");
                         return 1;
                     } 
                     else if (dealerTotal > playerTotal) {
                         System.out.println("Final game state:");
-                        System.out.println("Player: " + playerHand.toString() + "\nDealer: " + dealerHand.toString());
+                        System.out.println(this);
                         System.out.println("Dealer wins!");
                         return -1;
                     } 
                     else {
                         System.out.println("Final game state:");
-                        System.out.println("Player: " + playerHand.toString() + "\nDealer: " + dealerHand.toString());
+                        System.out.println(this);
                         System.out.println("It's a push (tie)!");
                         return 0;
                     }
                 }
                 else{
                     System.out.println("Final game state:");
-                    System.out.println("Player: " + playerHand.toString() + "\nDealer: " + dealerHand.toString());
+                    System.out.println(this);
                     System.out.println("Player wins!");
                     return 1;
                 }
@@ -132,7 +132,7 @@ public class Blackjack {
 
             else {
                 System.out.println("Final game state:");
-                System.out.println("Player: " + playerHand.toString() + "\nDealer: " + dealerHand.toString());
+                System.out.println(this);
                 System.out.println("Dealer wins!");
                 return -1;
             }
