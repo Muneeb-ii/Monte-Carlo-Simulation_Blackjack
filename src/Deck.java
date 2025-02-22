@@ -33,6 +33,7 @@ public class Deck {
      * @return the number of cards left in the deck
      */
     public int size() {
+        deck.size();
     }
 
     /**
