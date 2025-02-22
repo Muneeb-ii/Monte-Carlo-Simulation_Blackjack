@@ -31,6 +31,7 @@ public class Hand {
      * @return the number of cards in the hand
      */
     public int size(){
+        return hand.size();
     }
 
     /**
