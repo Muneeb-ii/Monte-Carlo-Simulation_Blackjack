@@ -13,9 +13,7 @@ public class Hand {
      * Removes any cards currently in the hand. 
      */
     public void reset(){
-        for (int i = 0; i<hand.size(); i++){
-            hand.remove(i);
-        }
+        hand = new ArrayList<Card>();
     }
 
     /**
