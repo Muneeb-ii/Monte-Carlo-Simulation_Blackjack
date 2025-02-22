@@ -9,6 +9,7 @@ public class Deck {
      * Calls build() as a subroutine to build the deck itself.
      */
     public Deck() {
+        build();
     }
 
     /**
