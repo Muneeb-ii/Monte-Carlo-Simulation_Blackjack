@@ -76,4 +76,15 @@ public class Blackjack {
             return true;
         }
     }
+
+    /**
+     * Represents the state of the game as a string.
+     * @return a string representation of the game state
+     */
+    public String toString(){
+        String playerHandState = playerHand.toString() + " (" + playerHand.getTotalValue() + ")";
+        String dealerHandState = dealerHand.toString() + " (" + dealerHand.getTotalValue() + ")";
+        return "Player: " + playerHandState + "\nDealer: " + dealerHandState;
+     }
+ 
 }
