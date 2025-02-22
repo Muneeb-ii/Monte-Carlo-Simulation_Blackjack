@@ -40,6 +40,7 @@ public class Hand {
      * @return the card in the hand at the specified index.
      */
     public Card getCard(int index){
+        return hand.get(index);
     }
 
     /**
