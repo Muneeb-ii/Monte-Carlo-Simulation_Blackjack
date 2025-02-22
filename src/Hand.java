@@ -48,6 +48,12 @@ public class Hand {
      * @return the summed value over all cards in the hand
      */
     public int getTotalValue(){
+        int totalValue = 0;
+        for(int i =0; i<hand.size(); i++){
+            totalValue += (hand.get(i)).getValue();
+        }
+
+        return totalValue;
     }
 
     /**
