@@ -1,6 +1,6 @@
 public class Hand {
 
-    public ArrayList<Card> hand;
+    private ArrayList<Card> hand;
 
     /**
      * Creates an empty hand as an ArrayList of Cards.  
