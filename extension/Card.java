@@ -26,6 +26,14 @@ public class Card {
     public int getValue() {
         return value;
     }
+
+    /**
+     * Sets the value of the card.
+     * @param val the value to set
+     */
+    public void setValue(int val){
+        value = val;
+    }
     
     /**
      * Returns a string representation of this card.
