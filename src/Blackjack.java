@@ -91,7 +91,7 @@ public class Blackjack {
     public int game(boolean verbose){
         reset();
         deal();
-        if (verbose = true){
+        if (verbose == true){
             System.out.println("Initial game state:");
             System.out.println("Player: " + playerHand.toString() + "\nDealer: " + dealerHand.toString());
             
