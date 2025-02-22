@@ -24,7 +24,7 @@ public class Blackjack {
         playerHand = new Hand();
         dealerHand = new Hand();
 
-        if(deck.size() < 26 || deck == null){
+        if(deck == null || deck.size() < 26){
             deck = new Deck();
             deck.shuffle();
         }
@@ -79,9 +79,93 @@ public class Blackjack {
      * @return a string representation of the game state
      */
     public String toString(){
-        String playerHandState = playerHand.toString() + " (" + playerHand.getTotalValue() + ")";
-        String dealerHandState = dealerHand.toString() + " (" + dealerHand.getTotalValue() + ")";
-        return "Player: " + playerHandState + "\nDealer: " + dealerHandState;
-     }
- 
+        return "Player: " + playerHand.toString()+ "\nDealer: " + dealerHand.toString();
+    }
+
+    /**
+     * Plays a game of Blackjack and returns the result.
+     * @param verbose if true, prints the initial and final game state
+     * @return 1 if the player wins, -1 if the dealer wins, 0 if it's a push
+     */
+
+    public int game(boolean verbose){
+        reset();
+        deal();
+        if (verbose = true){
+            System.out.println("Initial game state:");
+            System.out.println("Player: " + playerHand.toString() + "\nDealer: " + dealerHand.toString());
+            
+            boolean playerSafe = playerTurn();
+
+            if (playerSafe) {
+                boolean dealerSafe = dealerTurn();
+
+                if(dealerSafe){
+                    int playerTotal = playerHand.getTotalValue();
+                    int dealerTotal = dealerHand.getTotalValue();
+                    if (playerTotal > dealerTotal) {
+                        System.out.println("Final game state:");
+                        System.out.println("Player: " + playerHand.toString() + "\nDealer: " + dealerHand.toString());
+                        System.out.println("Player wins!");
+                        return 1;
+                    } 
+                    else if (dealerTotal > playerTotal) {
+                        System.out.println("Final game state:");
+                        System.out.println("Player: " + playerHand.toString() + "\nDealer: " + dealerHand.toString());
+                        System.out.println("Dealer wins!");
+                        return -1;
+                    } 
+                    else {
+                        System.out.println("Final game state:");
+                        System.out.println("Player: " + playerHand.toString() + "\nDealer: " + dealerHand.toString());
+                        System.out.println("It's a push (tie)!");
+                        return 0;
+                    }
+                }
+                else{
+                    System.out.println("Final game state:");
+                    System.out.println("Player: " + playerHand.toString() + "\nDealer: " + dealerHand.toString());
+                    System.out.println("Player wins!");
+                    return 1;
+                }
+            }
+
+            else {
+                System.out.println("Final game state:");
+                System.out.println("Player: " + playerHand.toString() + "\nDealer: " + dealerHand.toString());
+                System.out.println("Dealer wins!");
+                return -1;
+            }
+        
+        }
+        else{
+            boolean playerSafe = playerTurn();
+
+            if (playerSafe) {
+                boolean dealerSafe = dealerTurn();
+
+                if(dealerSafe){
+                    int playerTotal = playerHand.getTotalValue();
+                    int dealerTotal = dealerHand.getTotalValue();
+                    if (playerTotal > dealerTotal) {
+                        return 1;
+                    } 
+                    else if (dealerTotal > playerTotal) {
+                        return -1;
+                    } 
+                    else {
+                        return 0;
+                    }
+                }
+                else{
+                    return 1;
+                }
+            }
+
+            else {
+                return -1;
+            }
+        }
+
+    }
 }
