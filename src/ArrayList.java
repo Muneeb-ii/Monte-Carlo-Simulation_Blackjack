@@ -50,6 +50,7 @@ public class ArrayList<T> {
      */
     public void add(T item) {
         if (size == arr.length){
+            @SuppressWarnings("unchecked")
             T[] newArr = (T[]) new Object[size*2];
 
             for(int i=0; i<arr.length; i++){
