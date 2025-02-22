@@ -1,16 +1,21 @@
 public class Hand {
 
+    public ArrayList<Card> hand;
+
     /**
      * Creates an empty hand as an ArrayList of Cards.  
      */
     public Hand(){
-        ArrayList<Card> hand = new ArrayList<Card>();
+        hand = new ArrayList<Card>();
     }
 
     /**
      * Removes any cards currently in the hand. 
      */
     public void reset(){
+        for (int i = 0; i<hand.size(); i++){
+            hand.remove(i);
+        }
     }
 
     /**
