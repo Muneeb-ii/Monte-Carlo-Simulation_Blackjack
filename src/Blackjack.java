@@ -18,4 +18,18 @@ public class Blackjack {
         dealerHand = new Hand();
         deck.shuffle();
     }
+
+    /**
+     * Resets the game by creating a new player hand, and dealer hand.
+     * If the deck has less than 26 cards, a new deck is created and shuffled.
+     */
+    public void reset(){
+        playerHand = new Hand();
+        dealerHand = new Hand();
+
+        if(deck.size() < 26){
+            deck = new Deck();
+            deck.shuffle();
+        }
+    }
 }
