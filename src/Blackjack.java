@@ -59,4 +59,21 @@ public class Blackjack {
             return true;
         }
     }
+
+    /**
+     * Draws a card from the deck to the dealer until the dea;er's hand value is 17 or higher.
+     * @return false if the player's hand value is over 21, true otherwise
+     */
+    public boolean dealerTurn(){
+        for(int i = dealerHand.getTotalValue(); i < 17; i = dealerHand.getTotalValue()){
+            dealerHand.add(deck.deal());
+        }
+
+        if(dealerHand.getTotalValue()>21){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
 }
