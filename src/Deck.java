@@ -41,6 +41,7 @@ public class Deck {
      * @return the first card of the deck
      */
     public Card deal() {
+        return deck.remove(0);
     }
 
     /**
