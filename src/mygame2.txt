@@ -1,0 +1,7 @@
+Initial game state:
+Player: [2, 10] : 12
+Dealer: [6, 8] : 14
+After player's turn:
+Player: [2, 10, 2, 10] : 24
+Dealer: [6, 8] : 14
+Player busted! Dealer wins.
