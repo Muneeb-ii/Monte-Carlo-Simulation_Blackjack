@@ -168,4 +168,49 @@ public class Blackjack {
         }
 
     }
+
+    /**
+     * Main method to play a game of Blackjack.
+     * @param args
+     */
+    public static void main(String[] args) {
+        Blackjack game = new Blackjack();
+        game.reset();
+        game.deal();
+        System.out.println("Initial game state:");
+        System.out.println(game);
+        
+        // Player's turn
+        boolean playerSafe = game.playerTurn();
+        System.out.println("After player's turn:");
+        System.out.println(game);
+        
+        // If player busts, game over.
+        if (!playerSafe) {
+            System.out.println("Player busted! Dealer wins.");
+        }
+
+        else {
+            // Dealer's turn
+            boolean dealerSafe = game.dealerTurn();
+            System.out.println("After dealer's turn:");
+            System.out.println(game);
+        
+            // Determine outcome based on totals and bust status.
+            if (!dealerSafe) {
+                System.out.println("Dealer busted! Player wins.");
+            } 
+            else {
+                int playerTotal = game.playerHand.getTotalValue();
+                int dealerTotal = game.dealerHand.getTotalValue();
+                if (playerTotal > dealerTotal) {
+                    System.out.println("Player wins!");
+                } else if (dealerTotal > playerTotal) {
+                    System.out.println("Dealer wins!");
+                } else {
+                    System.out.println("It's a push (tie)!");
+                }
+            }
+        }
+    }
 }
