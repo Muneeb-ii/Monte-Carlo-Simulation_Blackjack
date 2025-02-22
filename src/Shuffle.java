@@ -1,3 +1,10 @@
+/**
+* Author: Muneeb Nafees
+* 
+* Purpose of the class: This class demonstrates how to shuffle an 
+* ArrayList by randomly removing elements from the list.
+*/
+
 import java.util.Random;
 
 public class Shuffle {
