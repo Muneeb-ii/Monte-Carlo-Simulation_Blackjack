@@ -36,9 +36,9 @@ public class BlackjackTests {
             }
         }
 
-        System.out.println("Draw percent: " + (draws*10000)/ 100);
-        System.out.println("Dealer win percent: " + (dealerWins*10000)/ 100);
-        System.out.println("Player win percent: " + (playerWins*10000)/ 100);
+        System.out.println("Draw percent: " + (draws*100)/ 10000);
+        System.out.println("Dealer win percent: " + (dealerWins*100)/ 10000);
+        System.out.println("Player win percent: " + (playerWins*100)/ 10000);
 
     }
 
