@@ -13,21 +13,18 @@ public class Blackjack {
      * Constructs a new Blackjack game with a new deck, player hand, and dealer hand.
      */
     public Blackjack() {
-        deck = new Deck();
-        playerHand = new Hand();
-        dealerHand = new Hand();
-        deck.shuffle();
+        reset();
     }
 
     /**
      * Resets the game by creating a new player hand, and dealer hand.
-     * If the deck has less than 26 cards, a new deck is created and shuffled.
+     * If the deck has less than 26 cards or is null, a new deck is created and shuffled.
      */
     public void reset(){
         playerHand = new Hand();
         dealerHand = new Hand();
 
-        if(deck.size() < 26){
+        if(deck.size() < 26 || deck == null){
             deck = new Deck();
             deck.shuffle();
         }
