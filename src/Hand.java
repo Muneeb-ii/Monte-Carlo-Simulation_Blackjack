@@ -61,7 +61,12 @@ public class Hand {
     public String toString(){
         String handString = "[";
         for(int i =0; i<hand.size(); i++){
-            handString += (hand.get(i)).toString();
+            if (i == hand.size()-1){
+                handString += (hand.get(i)).toString();
+            }
+            else{
+            handString += (hand.get(i)).toString() + ", ";
+            }
         }
         handString += "] : " + Integer.toString(getTotalValue());
         return handString;
