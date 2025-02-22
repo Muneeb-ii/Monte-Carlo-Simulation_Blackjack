@@ -61,5 +61,11 @@ public class Hand {
      * @return a string representation of the hand
      */
     public String toString(){
+        String handString = "[";
+        for(int i =0; i<hand.size(); i++){
+            handString += (hand.get(i)).toString();
+        }
+        handString += "] : " + Integer.toString(getTotalValue());
+        return handString;
     }
 }
