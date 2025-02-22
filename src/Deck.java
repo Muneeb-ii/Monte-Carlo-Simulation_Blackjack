@@ -48,6 +48,15 @@ public class Deck {
      * Shuffles the cards currently in the deck. 
      */
     public void shuffle() {
+        Random rand = new Random();
+        ArrayList<Card> shuffledDeck = new ArrayList<Card>();
+        
+        for (int i = 0; i<deck.size(); i++){
+            int indexToRemove = rand.nextInt(deck.size());
+            shuffledDeck.add(deck.get(indexToRemove));
+            deck.remove(indexToRemove);
+        }
+        deck = shuffledDeck;
     }
 
     /**
@@ -55,5 +64,17 @@ public class Deck {
      * @return a string representation of the deck
      */
     public String toString() {
+        String deckString = "[";
+        for(int i =0; i<deck.size(); i++){
+            if (i == deck.size()-1){
+                deckString += (deck.get(i)).toString();
+            }
+            else{
+                deckString += (deck.get(i)).toString() + ", ";
+            }
+        }
+        deckString += "]";
+        return deckString;
     }
+
 }
