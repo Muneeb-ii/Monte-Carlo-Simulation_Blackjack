@@ -51,10 +51,9 @@ public class Deck {
         Random rand = new Random();
         ArrayList<Card> shuffledDeck = new ArrayList<Card>();
         
-        for (int i = 0; i<deck.size(); i++){
+        while (deck.size()>0){
             int indexToRemove = rand.nextInt(deck.size());
-            shuffledDeck.add(deck.get(indexToRemove));
-            deck.remove(indexToRemove);
+            shuffledDeck.add(deck.remove(indexToRemove));
         }
         deck = shuffledDeck;
     }
