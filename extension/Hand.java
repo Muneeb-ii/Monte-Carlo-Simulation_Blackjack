@@ -55,6 +55,20 @@ public class Hand {
     }
 
     /**
+     * Returns true if the hand contains a card with the specified value.
+     * @param value of the card to be checked
+     * @return true if the hand contains a card with the specified value, false otherwise
+     */
+    public boolean valueExists(int value){
+        for(int i =0; i<hand.size(); i++){
+            if((hand.get(i)).getValue() == value){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
      * Returns a string representation of the hand.
      * @return a string representation of the hand
      */
