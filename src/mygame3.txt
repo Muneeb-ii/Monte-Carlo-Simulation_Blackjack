@@ -1,0 +1,10 @@
+Initial game state:
+Player: [3, 4] : 7
+Dealer: [5, 10] : 15
+After player's turn:
+Player: [3, 4, 2, 7] : 16
+Dealer: [5, 10] : 15
+After dealer's turn:
+Player: [3, 4, 2, 7] : 16
+Dealer: [5, 10, 10] : 25
+Dealer busted! Player wins.
