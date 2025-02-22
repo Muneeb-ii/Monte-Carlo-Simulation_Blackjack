@@ -32,4 +32,14 @@ public class Blackjack {
             deck.shuffle();
         }
     }
+
+    /**
+     * Deals two cards to the player and two cards to the dealer.
+     */
+    public void deal(){
+        playerHand.add(deck.deal()); // deal a card to the player
+        dealerHand.add(deck.deal()); // deal a card to the dealer (face up)
+        playerHand.add(deck.deal()); // deal a card to the player
+        dealerHand.add(deck.deal()); // deal a card to the dealer (face down)
+    }
 }
