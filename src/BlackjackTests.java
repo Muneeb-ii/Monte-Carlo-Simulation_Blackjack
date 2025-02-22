@@ -9,7 +9,7 @@ How to run:     java -ea BlackjackTests
 //Expected results:
 //Draw percent: 8 +/- 1
 //Dealer win percent: 49 +/- 1
-//Player win percent: 41 +/1 1
+//Player win percent: 41 +/- 1
 
 
 public class BlackjackTests {
