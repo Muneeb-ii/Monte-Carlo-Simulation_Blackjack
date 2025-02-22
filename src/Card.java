@@ -10,7 +10,13 @@ public class Card {
      * @param val
      */
     public Card(int val) {
-        // TBD
+        if (val < 2 || val >11) {
+            System.out.println("Invalid card value: " + val);
+        }
+        else {
+            value = val;
+        }
+        
     }
 
     /**
