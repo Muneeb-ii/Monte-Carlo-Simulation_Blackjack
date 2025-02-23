@@ -1,3 +1,10 @@
+/**
+ * Author: Muneeb Nafees
+ * 
+ * Purpose of the class: This class represents a hand of cards. 
+ * It contains an ArrayList of Cards and different methods to manipulate the hand.
+ */
+
 public class Hand {
 
     private ArrayList<Card> hand;
@@ -64,7 +71,6 @@ public class Hand {
         for(int i =0; i<hand.size(); i++){
             totalValue += (hand.get(i)).getValue();
         }
-
         return totalValue;
     }
 
