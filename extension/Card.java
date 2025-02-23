@@ -1,3 +1,9 @@
+/**
+ * Author: Muneeb Nafees
+ * 
+ * Purpose of the class: Holds the details of a card.
+ */
+
 public class Card {
 
     /**
@@ -16,7 +22,6 @@ public class Card {
         else {
             value = val;
         }
-        
     }
 
     /**
