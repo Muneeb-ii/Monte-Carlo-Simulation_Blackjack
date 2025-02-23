@@ -5,10 +5,10 @@ This project implements a Monte Carlo simulation of a simplified Blackjack game 
 ## Project Overview
 
 ### Core Components
-- Card Class: Represents a playing card with a value (ranging from 2-11, with 11 representing an Ace by default).
-- Hand Class: Represents a collection of cards (using an ArrayList) and includes methods to add cards, calculate total hand value, and display the hand.
-- Deck Class: Manages a deck of 52 cards (with the appropriate counts per value), provides a method for shuffling, and deals cards.
-- Blackjack Class: Implements the game logic:
+- __Card Class__: Represents a playing card with a value (ranging from 2-11, with 11 representing an Ace by default).
+- __Hand Class__: Represents a collection of cards (using an ArrayList) and includes methods to add cards, calculate total hand value, and display the hand.
+- __Deck Class__: Manages a deck of 52 cards (with the appropriate counts per value), provides a method for shuffling, and deals cards.
+- __Blackjack Class__: Implements the game logic:
   - Deals two cards to both the player and the dealer.
   - The player draws cards until reaching a total of at least 16.
   - The dealer draws until reaching at least 17.
@@ -25,12 +25,12 @@ This project implements a Monte Carlo simulation of a simplified Blackjack game 
 
 ### Flexible Ace Rule and Natural Blackjack Check
 - What I Did:
-	  •	Modified the game logic so that an Ace (normally 11) can be downgraded to 1 if a hand would otherwise bust.
-	  •	Added a check to identify a natural Blackjack (a two-card 21) which beats a 21 made up of more than two cards.
+	- Modified the game logic so that an Ace (normally 11) can be downgraded to 1 if a hand would otherwise bust.
+ 	- Added a check to identify a natural Blackjack (a two-card 21) which beats a 21 made up of more than two cards.
 - Why:
-	  •	To more closely mimic the real rules of Blackjack and study how this rule change affects game outcomes.
+	- To more closely mimic the real rules of Blackjack and study how this rule change affects game outcomes.
 - Outcome:
-    • Simulation results remained largely similar, but the handling of Aces reduced bust scenarios and clarified win conditions for natural Blackjacks.
+	- Simulation results remained largely similar, but the handling of Aces reduced bust scenarios and clarified win conditions for natural Blackjacks.
 
 ### Betting Strategy Extension
 - What I Did:
