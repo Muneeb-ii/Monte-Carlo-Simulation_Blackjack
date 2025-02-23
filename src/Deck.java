@@ -1,3 +1,11 @@
+/**
+ * Author: Muneeb Nafees
+ * 
+ * Purpose of class: The deck class is used to represent a deck of cards.
+ * The deck is represented as an ArrayList of Card objects.
+ * The deck can be built, shuffled, and dealt from.
+ */
+
 import java.util.Random;
 
 public class Deck {
@@ -75,5 +83,4 @@ public class Deck {
         deckString += "]";
         return deckString;
     }
-
 }
