@@ -61,20 +61,24 @@ public class StandardDeviation {
     }
 
     /**
-     * Calculates the standard deviation of the simulations.
-     * @param simulations
-     * @return standard deviation of the simulations
+     * Calculates the standard deviation and the relative standard devation in percentage of the simulations.
+     * @param simulations the array of simulations
      */
     public static void calculateStandardDeviation(double[] simulations){
         double sum = 0.0;
-        double mean = 0.0;
         for(double wins : simulations){
-            mean += wins;
+            sum += wins;
         }
-        mean = mean / 15;
+        double mean = sum / 15;
+        
+        double varianceSum = 0.0;
         for(double wins : simulations){
-            sum += Math.pow(wins - mean, 2);
+            varianceSum += Math.pow(wins - mean, 2);
         }
-        System.out.println(Math.sqrt(sum / 15));
+        double stdDev = Math.sqrt(varianceSum / 15);
+        double relativeStd = (stdDev / mean) * 100;  // Relative standard deviation in percentage
+        
+        System.out.println("Standard Deviation: " + stdDev);
+        System.out.println("Relative Standard Deviation: " + relativeStd + "%");
     }
 }
