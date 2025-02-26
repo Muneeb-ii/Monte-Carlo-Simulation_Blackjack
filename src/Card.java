@@ -17,7 +17,7 @@ public class Card {
      */
     public Card(int val) {
         if (val < 2 || val >11) {
-            System.out.println("Invalid card value: " + val);
+            System.out.println("Invalid card value: " + val); // print an error message
         }
         else {
             value = val;
