@@ -46,7 +46,7 @@ public class Blackjack {
      */
     public boolean playerTurn(){
         for(int i = playerHand.getTotalValue(); i < 16; i = playerHand.getTotalValue()){
-            playerHand.add(deck.deal());
+            playerHand.add(deck.deal()); // deal a card to the player until the player's hand value is 16 or higher
         }
 
         if(playerHand.getTotalValue()>21){
@@ -63,7 +63,7 @@ public class Blackjack {
      */
     public boolean dealerTurn(){
         for(int i = dealerHand.getTotalValue(); i < 17; i = dealerHand.getTotalValue()){
-            dealerHand.add(deck.deal());
+            dealerHand.add(deck.deal()); // deal a card to the dealer until the dealer's hand value is 17 or higher
         }
 
         if(dealerHand.getTotalValue()>21){
@@ -95,12 +95,12 @@ public class Blackjack {
             System.out.println("Initial game state:");
             System.out.println(this);
             
-            boolean playerSafe = playerTurn();
+            boolean playerSafe = playerTurn(); 
 
-            if (playerSafe) {
+            if (playerSafe) { // Checks if the player is safe
                 boolean dealerSafe = dealerTurn();
 
-                if(dealerSafe){
+                if(dealerSafe){ // Checks if the dealer is safe
                     int playerTotal = playerHand.getTotalValue();
                     int dealerTotal = dealerHand.getTotalValue();
                     if (playerTotal > dealerTotal) {
