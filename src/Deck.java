@@ -14,7 +14,7 @@ public class Deck {
 
     /**
      * Creates the underlying deck as an ArrayList of Card objects. 
-     * Calls build() as a subroutine to build the deck itself.
+     * Calls build() method to build the deck itself.
      */
     public Deck() {
         build();
@@ -28,7 +28,7 @@ public class Deck {
         deck = new ArrayList<Card>();
         for (int i = 0; i<4; i++){
             for(int j = 2; j < 12; j++){
-                deck.add(new Card(j));
+                deck.add(new Card(j));  
             }
         }
         for (int i = 0; i<12; i++){
