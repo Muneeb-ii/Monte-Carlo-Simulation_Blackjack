@@ -16,7 +16,7 @@
         int draws = 0;
         Blackjack game = new Blackjack();
 
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 100; i++) {  //runs 100 games of blackjack
             int result = game.game(false);
             if (result == 1) {
                 playerWins++;
@@ -32,11 +32,12 @@
         System.out.println("Dealer win percent: " + dealerWins);
         System.out.println("Player win percent: " + playerWins);
 
-        dealerWins = 0;
+        //resetting the values
+        dealerWins = 0; 
         playerWins = 0;
         draws = 0;
 
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 1000; i++) { //runs 1000 games of blackjack
             int result = game.game(false);
             if (result == 1) {
                 playerWins++;
@@ -52,11 +53,12 @@
         System.out.println("Dealer win percent: " + (dealerWins*100)/ 1000);
         System.out.println("Player win percent: " + (playerWins*100)/ 1000);
 
+        //resetting the values
         dealerWins = 0;
         playerWins = 0;
         draws = 0;
 
-        for (int i = 0; i < 10000; i++) {
+        for (int i = 0; i < 10000; i++) { //runs 10000 games of blackjack
             int result = game.game(false);
             if (result == 1) {
                 playerWins++;
