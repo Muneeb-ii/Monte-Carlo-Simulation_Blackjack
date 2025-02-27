@@ -12,9 +12,9 @@ public class StandardDeviation {
      */
     public static void main(String[] args){
         double playerWins;
-        double[] hundrenGamesSimulations = new double[15];
-        double[] thousandGamesSimulations = new double[15];
-        double[] tenThousandGamesSimulations = new double[15];
+        double[] hundrenGamesSimulations = new double[15]; // Array to store the number of player wins in 15 simulations of 100 games
+        double[] thousandGamesSimulations = new double[15]; // Array to store the number of player wins in 15 simulations of 1000 games
+        double[] tenThousandGamesSimulations = new double[15]; // Array to store the number of player wins in 15 simulations of 10000 games
 
         Blackjack game = new Blackjack();
         
